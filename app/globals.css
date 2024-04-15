@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #e9a9ff;
+}
+
+h1,
+h2 {
+  -webkit-text-stroke: 0.16rem black;
+}
+
+h3 {
+  -webkit-text-stroke: 0.08rem black;
+}
+
+button {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 4px;
+  padding: 0.5rem;
+  border: none;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
