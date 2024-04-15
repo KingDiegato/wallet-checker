@@ -19,7 +19,7 @@ export default function Home() {
           <form onSubmit={handleSubmit}>
             <label>
               <h3 className="text-white text-center text-xl">
-                Check Wallet elegibility
+                Check Wallet Elegibility
               </h3>
               <input
                 name="address"
