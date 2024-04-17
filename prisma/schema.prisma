@@ -13,10 +13,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Wallets {
-  id        Int      @id @default(autoincrement())
-  address   String
+  id        Int       @id @default(autoincrement())
+  address   String    @unique
 
   @@map("wallets")
 }
