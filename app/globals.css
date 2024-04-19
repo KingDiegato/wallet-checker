@@ -13,9 +13,12 @@ body {
   background: #e9a9ff;
 }
 
-h1,
-h2 {
+h1 {
   -webkit-text-stroke: 0.16rem black;
+}
+
+h2 {
+  -webkit-text-stroke: 0.12rem black;
 }
 
 h3 {

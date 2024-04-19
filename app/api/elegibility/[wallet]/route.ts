@@ -5,6 +5,18 @@ export async function GET(
   request: NextRequest,
   response: { params: { wallet: string } }
 ) {
+  if (response.params.wallet.length !== 44) {
+    return NextResponse.json({
+      message: "Invalid wallet address",
+      status: 400,
+    });
+  }
+  if (!response.params.wallet.match(/^[a-zA-Z0-9]+$/)) {
+    return NextResponse.json({
+      message: "Invalid wallet address",
+      status: 400,
+    });
+  }
   await prisma.$connect();
   const wallet = response.params.wallet;
   try {
